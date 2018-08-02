@@ -1,0 +1,19 @@
+{
+	"name": "cordova-javaPOS",
+	"displayName": "cordova-javaPOS",
+	"version": "1.2.0",
+	"description": "The cordova javapos-shtrih plugin provides methods to connect and manage shtrih-m devices.",
+	"scripts": {},
+	"types": "./types/index.d.ts",
+	"author": "Artem Gordeev",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"cordova-android": "7.0.0"
+	},
+	"cordova": {
+		"id": "cordova-javaPOS",
+		"platforms": [
+			"android"
+		]
+	}
+}

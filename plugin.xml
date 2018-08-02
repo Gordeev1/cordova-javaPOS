@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="javaPOS" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>javaPOS</name>
+    
+    <js-module name="javaPOS" src="www/javaPOS.js">
+        <clobbers target="javaPOS" />
+    </js-module>
+
+    <platform name='android'>
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="javaPOS">
+                <param name="android-package" value="ru.beedigital.javapos.javaPOS" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/java/ru/beedigital/javapos/javaPOS.java" target-dir="src/ru/beedigital/javapos" />
+        <source-file src="src/android/java/ru/beedigital/javapos/JposConfig.java" target-dir="src/ru/beedigital/javapos" />
+        <source-file src="src/android/java/ru/beedigital/javapos/LogbackConfig.java" target-dir="src/ru/beedigital/javapos" />
+        <resource-file src='src/android/libs/FptrServiceAndroid-release.aar' target='../../libs/FptrServiceAndroid-release.aar' />
+        <resource-file src='src/android/assets/jpos.xml' target='./assets/jpos.xml' />
+        <lib-file src="src/android/libs/d2xx.jar" />
+        <lib-file src="src/android/libs/jpos113.jar" />
+        <lib-file src="src/android/libs/slf4j-api-1.7.21.jar" />
+        <lib-file src="src/android/libs/xerces4android.jar" />
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+        </config-file>
+
+    </platform>
+
+</plugin>
