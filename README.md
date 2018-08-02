@@ -123,9 +123,13 @@ javaPOS.closeDayAndGetReport().then(report => console.log(report));
 }
 ```
 
-## TODO
+# TODO
 
 -   close day report
 -   javaPOS.printReceipt - currency param
 -   javaPOS.printReceipt - VAT param
 -   open shift with cashier params
+
+# Authors:
+
+-   Artem Gordeev - [@gordeev1](https://github.com/gordeev1)

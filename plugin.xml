@@ -11,13 +11,13 @@
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="javaPOS">
-                <param name="android-package" value="ru.beedigital.javapos.javaPOS" />
+                <param name="android-package" value="org.gordeev.javapos.javaPOS" />
             </feature>
         </config-file>
 
-        <source-file src="src/android/java/ru/beedigital/javapos/javaPOS.java" target-dir="src/ru/beedigital/javapos" />
-        <source-file src="src/android/java/ru/beedigital/javapos/JposConfig.java" target-dir="src/ru/beedigital/javapos" />
-        <source-file src="src/android/java/ru/beedigital/javapos/LogbackConfig.java" target-dir="src/ru/beedigital/javapos" />
+        <source-file src="src/android/java/org.gordeev/javapos/javaPOS.java" target-dir="src/org.gordeev/javapos" />
+        <source-file src="src/android/java/org.gordeev/javapos/JposConfig.java" target-dir="src/org.gordeev/javapos" />
+        <source-file src="src/android/java/org.gordeev/javapos/LogbackConfig.java" target-dir="src/org.gordeev/javapos" />
         <resource-file src='src/android/libs/FptrServiceAndroid-release.aar' target='../../libs/FptrServiceAndroid-release.aar' />
         <resource-file src='src/android/assets/jpos.xml' target='./assets/jpos.xml' />
         <lib-file src="src/android/libs/d2xx.jar" />
